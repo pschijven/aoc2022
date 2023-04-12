@@ -10,7 +10,7 @@ class Day01Test < Minitest::Test
 
   def test_top3_calories
     day01 = Day01.new("data/day01")
-    assert_equal 22, day01.find_top3_max_calories
+    assert_equal 198551, day01.find_top3_max_calories
   end
 
 end
