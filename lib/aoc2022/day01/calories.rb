@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
-class Day01 < Aoc2022Base
+class Calories
+
+  def initialize(filename)
+    @filename = filename
+  end
 
   def find_max_calories
     parse_calories.max

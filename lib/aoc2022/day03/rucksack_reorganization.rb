@@ -1,4 +1,4 @@
-class Day03
+class RucksackReorganization
 
   def initialize
     # Initialize Hash of priorities

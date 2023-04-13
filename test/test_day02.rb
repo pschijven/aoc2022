@@ -1,5 +1,5 @@
 require "test_helper"
-require 'aoc2022/day02/day02'
+require 'aoc2022/day02/round'
 
 class Day02Test < Minitest::Test
 
@@ -16,13 +16,19 @@ class Day02Test < Minitest::Test
   end
 
   def test_day2_part1
-    day2 = Day02.new('data/day02')
-    assert_equal(11475, day2.score)
+    result = File.readlines('data/day02', chomp: true)
+        .map { |line| Round.score(line) }
+        .sum
+
+    assert_equal(11475, result)
   end
 
   def test_day2_part2
-    day2 = Day02.new('data/day02')
-    assert_equal(16862, day2.encrypted_score)
+    result = File.readlines('data/day02', chomp: true)
+                 .map { |line| Round.encrypted_score(line) }
+                 .sum
+
+    assert_equal(16862, result)
   end
 
 end
